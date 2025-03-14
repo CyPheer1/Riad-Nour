@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riad Nour - Administration</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Riad Nour</h2>
+                <p>Tableau de Bord</p>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> <span>Tableau de bord</span></a></li>
+                    <li><a href="#"><i class="fas fa-hotel"></i> <span>Riads & Hôtels</span></a></li>
+                    <li><a href="#"><i class="fas fa-key"></i> <span>Réservations</span></a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> <span>Clients</span></a></li>
+                    <li><a href="#"><i class="fas fa-tag"></i> <span>Promotions</span></a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> <span>Rapports</span></a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> <span>Paramètres</span></a></li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> <span>Retourner au site</span></a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="toggle-sidebar">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="notifications">
+                        <button><i class="fas fa-bell"></i> <span class="badge">3</span></button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">
+                                <h4>Notifications</h4>
+                                <a href="#">Marquer comme lu</a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="notification-icon"><i class="fas fa-user-check"></i></div>
+                                        <div class="notification-content">
+                                            <p>Nouvelle réservation de Youssef Amrani</p>
+                                            <span>Il y a 5 minutes</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="notification-icon"><i class="fas fa-calendar-check"></i></div>
+                                        <div class="notification-content">
+                                            <p>Arrivée aujourd'hui: 5 clients</p>
+                                            <span>Il y a 2 heures</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="notification-icon"><i class="fas fa-star"></i></div>
+                                        <div class="notification-content">
+                                            <p>Nouvel avis 5 étoiles</p>
+                                            <span>Il y a 1 jour</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="dropdown-footer">
+                                <a href="#">Voir toutes les notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="messages">
+                        <button><i class="fas fa-envelope"></i> <span class="badge">1</span></button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">
+                                <h4>Messages</h4>
+                                <a href="#">Marquer comme lu</a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="message-avatar">
+                                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sara Bennis">
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="message-info">
+                                                <h5>Sara Bennis</h5>
+                                                <span>Il y a 10 minutes</span>
+                                            </div>
+                                            <p>Pouvons-nous avoir une chambre avec vue sur la médina?</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="dropdown-footer">
+                                <a href="#">Voir tous les messages</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-user">
+                        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Mohamed El Ouardi">
+                        <div>
+                            <h4>Mohamed El Ouardi</h4>
+                            <span>Administrateur Principal</span>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <div class="page-header">
+                    <h1>Tableau de bord</h1>
+                    <div class="date-filter">
+                        <button class="active">Aujourd'hui</button>
+                        <button>Cette semaine</button>
+                        <button>Ce mois</button>
+                        <button>Cette année</button>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(61, 165, 168, 0.2); color: #3da5a8;">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>428</h3>
+                            <p>Réservations</p>
+                            <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 12.5%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(198, 116, 44, 0.2); color: #c6742c;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>1,245</h3>
+                            <p>Visiteurs</p>
+                            <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 18.2%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(83, 166, 106, 0.2); color: #53a66a;">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>856,400 MAD</h3>
+                            <p>Revenus</p>
+                            <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 7.8%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(241, 141, 47, 0.2); color: #f18d2f;">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>4.8/5</h3>
+                            <p>Note moyenne</p>
+                            <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 0.3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Panels -->
+                <div class="admin-panels">
+                    <!-- Room Availability Panel -->
+                    <div class="admin-panel room-availability">
+                        <div class="panel-header">
+                            <h2>Disponibilité des Chambres</h2>
+                            <div class="panel-actions">
+                                <button class="btn-outline"><i class="fas fa-filter"></i> Filtrer</button>
+                                <button class="btn-primary"><i class="fas fa-plus"></i> Nouvelle Chambre</button>
+                            </div>
+                        </div>
+                        <div class="availability-calendar">
+                            <div class="month-selector">
+                                <button><i class="fas fa-chevron-left"></i></button>
+                                <h3>Novembre 2023</h3>
+                                <button><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <table class="calendar-table">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Chambre</th>
+                                        <th>01</th>
+                                        <th>02</th>
+                                        <th>03</th>
+                                        <th>04</th>
+                                        <th>05</th>
+                                        <th>06</th>
+                                        <th>07</th>
+                                        <th>08</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Suite Royale</td>
+                                        <td>101</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                        <td class="available">D</td>
+                                        <td class="available">D</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                        <td class="maintenance">M</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suite Ambassadeur</td>
+                                        <td>102</td>
+                                        <td class="available">D</td>
+                                        <td class="available">D</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                        <td class="available">D</td>
+                                        <td class="available">D</td>
+                                        <td class="available">D</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suite Deluxe</td>
+                                        <td>103</td>
+                                        <td class="maintenance">M</td>
+                                        <td class="maintenance">M</td>
+                                        <td class="available">D</td>
+                                        <td class="available">D</td>
+                                        <td class="available">D</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chambre Premium</td>
+                                        <td>201</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                        <td class="available">D</td>
+                                        <td class="available">D</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                        <td class="available">D</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chambre Standard</td>
+                                        <td>202</td>
+                                        <td class="available">D</td>
+                                        <td class="available">D</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                        <td class="available">D</td>
+                                        <td class="available">D</td>
+                                        <td class="booked">R</td>
+                                        <td class="booked">R</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="calendar-legend">
+                                <span><i class="fas fa-square available"></i> Disponible</span>
+                                <span><i class="fas fa-square booked"></i> Réservé</span>
+                                <span><i class="fas fa-square maintenance"></i> Maintenance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Reservations Panel -->
+                    <div class="admin-panel recent-reservations">
+                        <div class="panel-header">
+                            <h2>Réservations Récentes</h2>
+                            <div class="panel-actions">
+                                <button class="btn-primary"><i class="fas fa-eye"></i> Voir tout</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Client</th>
+                                        <th>Chambre</th>
+                                        <th>Arrivée</th>
+                                        <th>Départ</th>
+                                        <th>Statut</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#RN8742</td>
+                                        <td>
+                                            <div class="customer-info">
+                                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Karim Sabri">
+                                                <div>
+                                                    <h4>Karim Sabri</h4>
+                                                    <span>karim.s@gmail.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Suite Royale</td>
+                                        <td>12 Nov 2023</td>
+                                        <td>15 Nov 2023</td>
+                                        <td><span class="status confirmed">Confirmé</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button title="Modifier"><i class="fas fa-edit"></i></button>
+                                                <button title="Détails"><i class="fas fa-eye"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#RN8741</td>
+                                        <td>
+                                            <div class="customer-info">
+                                                <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Leila Bennani">
+                                                <div>
+                                                    <h4>Leila Bennani</h4>
+                                                    <span>leila.b@outlook.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Suite Deluxe</td>
+                                        <td>10 Nov 2023</td>
+                                        <td>14 Nov 2023</td>
+                                        <td><span class="status pending">En attente</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button title="Modifier"><i class="fas fa-edit"></i></button>
+                                                <button title="Détails"><i class="fas fa-eye"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#RN8740</td>
+                                        <td>
+                                            <div class="customer-info">
+                                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Hassan Tazi">
+                                                <div>
+                                                    <h4>Hassan Tazi</h4>
+                                                    <span>h.tazi@yahoo.fr</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Chambre Premium</td>
+                                        <td>08 Nov 2023</td>
+                                        <td>10 Nov 2023</td>
+                                        <td><span class="status completed">Terminé</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button title="Modifier"><i class="fas fa-edit"></i></button>
+                                                <button title="Détails"><i class="fas fa-eye"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Active Promotions Panel -->
+                    <div class="admin-panel active-promotions">
+                        <div class="panel-header">
+                            <h2>Promotions Actives</h2>
+                            <div class="panel-actions">
+                                <button class="btn-primary"><i class="fas fa-plus"></i> Nouvelle Promotion</button>
+                            </div>
+                        </div>
+                        <div class="promotions-list">
+                            <div class="promotion-card">
+                                <div class="promotion-info">
+                                    <h3>Offre Spéciale Eid Al-Adha</h3>
+                                    <p>20% de réduction sur toutes les suites pour les séjours entre le 15 et 30 Juin.</p>
+                                    <div class="promotion-details">
+                                        <span><i class="fas fa-calendar"></i> 15 juin - 30 juin 2024</span>
+                                        <span><i class="fas fa-tag"></i> 20% de réduction</span>
+                                    </div>
+                                </div>
+                                <div class="promotion-actions">
+                                    <button title="Modifier"><i class="fas fa-edit"></i></button>
+                                    <button title="Désactiver" class="active"><i class="fas fa-toggle-on"></i></button>
+                                </div>
+                            </div>
+                            <div class="promotion-card">
+                                <div class="promotion-info">
+                                    <h3>Forfait Week-end Détente</h3>
+                                    <p>Deux nuits pour le prix d'une + massage gratuit inclus le vendredi et samedi.</p>
+                                    <div class="promotion-details">
+                                        <span><i class="fas fa-calendar"></i> Permanent (Ven-Sam)</span>
+                                        <span><i class="fas fa-gift"></i> 1 nuit gratuite</span>
+                                    </div>
+                                </div>
+                                <div class="promotion-actions">
+                                    <button title="Modifier"><i class="fas fa-edit"></i></button>
+                                    <button title="Désactiver" class="active"><i class="fas fa-toggle-on"></i></button>
+                                </div>
+                            </div>
+                            <div class="promotion-card">
+                                <div class="promotion-info">
+                                    <h3>Offre Hiver Marocain</h3>
+                                    <p>15% de réduction pour les réservations anticipées de 60 jours pour la saison d'hiver.</p>
+                                    <div class="promotion-details">
+                                        <span><i class="fas fa-calendar"></i> 01 dec - 28 fév 2024</span>
+                                        <span><i class="fas fa-tag"></i> 15% de réduction</span>
+                                    </div>
+                                </div>
+                                <div class="promotion-actions">
+                                    <button title="Modifier"><i class="fas fa-edit"></i></button>
+                                    <button title="Activer"><i class="fas fa-toggle-off"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Reviews Panel -->
+                    <div class="admin-panel customer-reviews">
+                        <div class="panel-header">
+                            <h2>Avis Clients Récents</h2>
+                            <div class="panel-actions">
+                                <div class="dropdown">
+                                    <button class="btn-outline"><i class="fas fa-filter"></i> Filtrer <i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-container">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Fatima Zohra">
+                                        <div>
+                                            <h4>Fatima Zohra</h4>
+                                            <span>Suite Royale - Oct 2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <span class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span class="rating-value">5.0</span>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Un séjour magnifique dans ce riad authentique. Le service était impeccable et le petit déjeuner sur la terrasse avec vue sur la médina était juste magique. Je reviendrai sans hésiter.</p>
+                                </div>
+                                <div class="review-footer">
+                                    <span class="review-date">Il y a 2 jours</span>
+                                    <div class="review-actions">
+                                        <button title="Répondre"><i class="fas fa-reply"></i></button>
+                                        <button title="Marquer comme important"><i class="far fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Youssef Amrani">
+                                        <div>
+                                            <h4>Youssef Amrani</h4>
+                                            <span>Suite Deluxe - Sep 2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <span class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </span>
+                                        <span class="rating-value">4.0</span>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Une expérience unique dans ce riad typiquement marocain. Le personnel est très attentionné et les chambres sont décorées avec beaucoup de goût. Seul petit bémol, le bruit des travaux à proximité.</p>
+                                </div>
+                                <div class="review-footer">
+                                    <span class="review-date">Il y a 1 semaine</span>
+                                    <div class="review-actions">
+                                        <button title="Répondre"><i class="fas fa-reply"></i></button>
+                                        <button title="Marquer comme important"><i class="far fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Nadia Bakkali">
+                                        <div>
+                                            <h4>Nadia Bakkali</h4>
+                                            <span>Chambre Premium - Sep 2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <span class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </span>
+                                        <span class="rating-value">4.5</span>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Excellente hospitalité, décoration traditionnelle marocaine soignée. Le hammam et le service de massage étaient particulièrement remarquables. Je recommande vivement ce riad!</p>
+                                </div>
+                                <div class="review-footer">
+                                    <span class="review-date">Il y a 2 semaines</span>
+                                    <div class="review-actions">
+                                        <button title="Répondre"><i class="fas fa-reply"></i></button>
+                                        <button title="Marquer comme important" class="marked"><i class="fas fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

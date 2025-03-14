@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riad Nour - Réservation d'Hôtels Authentiques Marocains</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Riad Nour">
+                    </a>
+                    <p class="logo-tagline">Luxe Authentique Marocain</p>
+                </div>
+                
+                <button class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="#" class="active">Accueil</a></li>
+                        <li><a href="#">Riads & Hôtels</a></li>
+                        <li><a href="#">Suites</a></li>
+                        <li><a href="#">Offres</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions">
+                    <a href="#" class="btn btn-outline">Connexion</a>
+                    <a href="signup.html" class="btn btn-primary">Inscription</a>
+                    <button type="button" class="admin-btn" title="Administration" onclick="window.location.href='admin.html';">
+                        <i class="fas fa-user-shield"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Découvrez l'Art de l'Hospitalité Marocaine</h2>
+                <p>Vivez une expérience authentique dans nos riads et hôtels de luxe aux quatre coins du Maroc</p>
+                <div class="search-container">
+                    <form class="search-form">
+                        <div class="form-group">
+                            <label for="location">Destination</label>
+                            <input type="text" id="location" placeholder="Où souhaitez-vous séjourner?">
+                        </div>
+                        <div class="form-group">
+                            <label for="check-in">Arrivée</label>
+                            <input type="date" id="check-in">
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out">Départ</label>
+                            <input type="date" id="check-out">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Voyageurs</label>
+                            <select id="guests">
+                                <option value="1">1 Voyageur</option>
+                                <option value="2">2 Voyageurs</option>
+                                <option value="3">3 Voyageurs</option>
+                                <option value="4">4+ Voyageurs</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Rechercher</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-hotels">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Riads et Hôtels Recommandés</h2>
+                <p>Sélectionnés pour leur emplacement, leur charme et l'excellence de leur service</p>
+            </div>
+            <div class="hotel-grid">
+                <!-- Hotel Card 1 -->
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+                             data-src="https://images.unsplash.com/photo-1539758462369-43adaa19bc1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Riad de Luxe">
+                        <div class="hotel-rating">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Riad Al Andalous</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Médina, Marrakech</p>
+                        <p class="description">Un havre de paix au cœur de la médina de Marrakech avec patio traditionnel, fontaine et terrasse panoramique.</p>
+                        <div class="hotel-meta">
+                            <div class="price-container">
+                                <span class="price">1800 MAD <small>/nuit</small></span>
+                                <span class="original-price">2000 MAD <span class="discount-badge">-10%</span></span>
+                            </div>
+                            <a href="#" class="btn btn-sm">Voir Détails</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hotel Card 2 -->
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+                             data-src="https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Hôtel en Bord de Mer">
+                        <div class="hotel-rating">
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Dar Al Bahar</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Essaouira, Côte Atlantique</p>
+                        <p class="description">Magnifique dar face à l'océan avec vue imprenable sur les remparts et accès privé à la plage.</p>
+                        <div class="hotel-meta">
+                            <div class="price-container">
+                                <span class="price">1500 MAD <small>/nuit</small></span>
+                            </div>
+                            <a href="#" class="btn btn-sm">Voir Détails</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hotel Card 3 -->
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+                             data-src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Riad Traditionnel">
+                        <div class="hotel-rating">
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Palais Amani</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Médina, Fès</p>
+                        <p class="description">Ancien palais restauré dans la plus pure tradition marocaine avec jardin d'orangers et hammam privé.</p>
+                        <div class="hotel-meta">
+                            <div class="price-container">
+                                <span class="price">2200 MAD <small>/nuit</small></span>
+                                <span class="original-price">2500 MAD <span class="discount-badge">-12%</span></span>
+                            </div>
+                            <a href="#" class="btn btn-sm">Voir Détails</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hotel Card 4 -->
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+                             data-src="https://images.unsplash.com/photo-1528127269322-539801943592?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Kasbah dans le Désert">
+                        <div class="hotel-rating">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Kasbah du Toubkal</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Imlil, Montagnes de l'Atlas</p>
+                        <p class="description">Refuge de montagne luxueux offrant des vues spectaculaires sur la vallée et le sommet du Toubkal.</p>
+                        <div class="hotel-meta">
+                            <div class="price-container">
+                                <span class="price">1900 MAD <small>/nuit</small></span>
+                            </div>
+                            <a href="#" class="btn btn-sm">Voir Détails</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="special-offers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Offres Spéciales & Découvertes</h2>
+                <p>Expériences authentiques et séjours exclusifs pour découvrir le meilleur du Maroc</p>
+            </div>
+            <div class="offers-container">
+                <div class="offer-card">
+                    <div class="offer-content">
+                        <h3>Escapade Culturelle</h3>
+                        <p>3 nuits à Fès avec visite guidée de la médina et atelier d'artisanat traditionnel. Réduction de 20% sur votre séjour.</p>
+                        <a href="#" class="btn btn-secondary">Découvrir l'Offre</a>
+                    </div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1548018560-c7196548e84d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Médina de Fès">
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-content">
+                        <h3>Magie du Désert</h3>
+                        <p>Séjour de 2 nuits en camp de luxe dans le désert de Merzouga avec excursion en dromadaire et soirée sous les étoiles.</p>
+                        <a href="#" class="btn btn-secondary">Découvrir l'Offre</a>
+                    </div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1518006147670-f04b2798143e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Désert de Merzouga">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>Riad Nour</h2>
+                    <p>L'élégance marocaine à votre service</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h3>Liens Rapides</h3>
+                        <ul>
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">À Propos</a></li>
+                            <li><a href="#">Nos Hôtels</a></li>
+                            <li><a href="#">Suites & Chambres</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h3>Assistance</h3>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Centre d'Aide</a></li>
+                            <li><a href="#">Politique d'Annulation</a></li>
+                            <li><a href="#">Conditions Générales</a></li>
+                            <li><a href="#">Politique de Confidentialité</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h3>Contactez-Nous</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 7 Derb El Hajra, Médina, Marrakech</li>
+                            <li><i class="fas fa-phone"></i> +212 5 24 38 76 34</li>
+                            <li><i class="fas fa-envelope"></i> contact@riadnour.ma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Riad Nour. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA Sticky pour Mobile -->
+    <div class="mobile-cta">
+        <a href="#" class="btn btn-primary">Réserver maintenant</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/lazy-load.js"></script>
+</body>
+</html> 
